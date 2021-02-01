@@ -1,0 +1,75 @@
+<!doctype html>
+
+<html>
+
+    <head>
+        <title>ALL VLANS WEB PAGE</title>
+        <meta name="description" content="Page Description Here" />
+        <meta name="Viewport" content="width=device-width, initial-scale=1"/>
+
+        <style type="text/css">
+            Body {
+                   color: black;
+                  }
+        </style>
+    </head>
+
+    <body>
+
+        <header height="100">
+            <h3>All vlans are displayed in this page. In addition, you can ADD, DELETE and UPDATE
+                vlans from here!</h3>
+        </header>
+
+        <main>
+            <a href="{{ url_for('add_vlan') }}">Add New Vlan</a> <i>[ After adding a new vlan,
+            click update for the state to also be updated ]</i>
+            <br />
+            <br />
+            <a href="{{ url_for('update_vlans') }}">Update Vlans</a>
+            <br />
+            <br />
+            <table width="100%" border="1px" bordercolor="black" cellspacing="2" cellpadding="5">
+
+                <thead>
+                    <tr>
+                        <th>VLAN ID</th>
+                        <th>VLAN NAME</th>
+                        <th>VLAN DESCRIPTION</th>
+                        <th>VLAN STATE</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                {% for vlan in all_vlans %}
+                    <tr>
+                        <td>{{ vlan.id }}</td>
+                        <td>{{ vlan.name }}</td>
+                        <td>{{ vlan.description }}</td>
+                        <td>{{ vlan.state }}</td>
+                        {% if vlan.id != 1 %}
+                            <td><a href="{{ url_for('delete_vlan', vlan_id=vlan.id) }}" style="color: red;">Delete</a></td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+
+            </table>
+
+
+        </main>
+
+        <br />
+        <br />
+
+        <footer>
+            <center>&copy; Copyright 2021 <br />
+                <a href="#">Terms and Conditions</a>
+            </center>
+        </footer>
+
+    </body>
+
+</html>
