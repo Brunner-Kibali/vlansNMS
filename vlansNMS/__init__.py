@@ -4,6 +4,8 @@ from flask import Flask
 from flask_cors import CORS
 
 # load the environment variables
+from flask_migrate import Migrate
+
 load_dotenv()
 
 app = Flask(__name__)
@@ -27,16 +29,7 @@ import vlansNMS.views.ui_views
 import vlansNMS.models
 db.create_all()
 db.session.commit()
-# db.init_app(app)
-# migrate = Migrate(app, db)
-
-connection_details = {
-    "device_type": os.getenv("DEVICE_TYPE", "cisco_ios"),
-    "host": os.getenv('DEVICE_ADDRESS'),
-    "username": os.getenv('DEVICE_USERNAME'),
-    "password": os.getenv('DEVICE_PASSWORD'),
-    "port": os.getenv('DEVICE_PORT', '22')
-}
+db.init_app(app)
+migrate = Migrate(app, db)
 
 
-# connection = ConnectHandler(**connection_details)

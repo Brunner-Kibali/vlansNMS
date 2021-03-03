@@ -30,7 +30,7 @@ def all_vlans():
     context = {
         'all_vlans': vlans_in_db
     }
-    return render_template('all_vlans.html', **context)
+    return render_template('display_vlans.html', **context)
 
 
 @app.route("/update-vlans")
