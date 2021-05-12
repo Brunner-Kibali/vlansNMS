@@ -19,7 +19,7 @@ POSTGRES_DB = os.getenv('POSTGRES_DB')
 
 from flask_sqlalchemy import SQLAlchemy
 
-db_uri = f"postgres://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{POSTGRES_PORT}/{POSTGRES_DB}"
+db_uri = f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{POSTGRES_PORT}/{POSTGRES_DB}"
 app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
@@ -27,9 +27,8 @@ db = SQLAlchemy(app)
 import vlansNMS.views.ui_views
 
 import vlansNMS.models
+
 db.create_all()
 db.session.commit()
 db.init_app(app)
 migrate = Migrate(app, db)
-
-

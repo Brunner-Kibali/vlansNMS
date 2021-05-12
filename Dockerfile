@@ -8,6 +8,7 @@ RUN python -m pip install -U setuptools
 RUN apk --update add --no-cache --virtual build-deps $DEPS
 ENV STATIC_URL /static
 ENV STATIC_PATH /vlansNMS/static
+CMD ["ufw allow 8000"]
 COPY ./requirements.txt /vlansNMS/requirements.txt
 RUN pip install -r /vlansNMS/requirements.txt
 

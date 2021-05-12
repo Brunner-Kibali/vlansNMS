@@ -1,4 +1,4 @@
-#!/home/gns3/PycharmProjects/vlansNMS/venv/bin/python
+#!/home/brunner/PycharmProjects/vlansNMS/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

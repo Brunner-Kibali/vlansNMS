@@ -2830,3 +2830,276 @@ VLAN Name                             Status    Ports
 2021-03-04 09:53:35,784  delete_vlan_from_switch  DEBUG: attempting to delete vlan 299 from switch
 2021-03-04 09:53:38,918  delete_vlan_from_switch  DEBUG: successfully deleted vlan 299 from switch
 2021-03-04 09:53:38,918  delete_vlan_from_db  DEBUG: attempting to delete vlan 299 from database
+2021-05-11 06:59:31,895  get_vlans  DEBUG: getting all vlans
+2021-05-11 06:59:31,935  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 07:00:05,599  vlan_info  DEBUG: start sending 'show vlan brief'
+2021-05-11 07:00:07,424  vlan_info  DEBUG: parsing 'show vlan brief' string to python datatypes
+2021-05-11 07:00:07,424  vlan_info  DEBUG: 
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    
+100  mgmt                             active    Po11, Eth1/1, Eth1/2
+101  prod                             active    Po11, Eth1/1, Eth1/2
+102  dev                              active    Po11, Eth1/1, Eth1/2
+103  test                             active    Po11, Eth1/1, Eth1/2
+104  security                         active    Po11, Eth1/1, Eth1/2
+105  iot                              active    Po11, Eth1/1, Eth1/2
+
+
+2021-05-11 07:00:07,424  vlan_info  DEBUG: fetching vlan description
+2021-05-11 07:00:07,424  vlan_info  DEBUG: start running 'show interface vlan 1'
+2021-05-11 07:00:09,969  vlan_info  DEBUG: successfully completed running 'show interface vlan 1'
+2021-05-11 07:00:09,970  vlan_info  DEBUG: start running 'show interface vlan 100'
+2021-05-11 07:00:13,319  vlan_info  DEBUG: successfully completed running 'show interface vlan 100'
+2021-05-11 07:00:13,320  vlan_info  DEBUG: start running 'show interface vlan 101'
+2021-05-11 07:00:14,975  vlan_info  DEBUG: successfully completed running 'show interface vlan 101'
+2021-05-11 07:00:14,976  vlan_info  DEBUG: start running 'show interface vlan 102'
+2021-05-11 07:00:17,744  vlan_info  DEBUG: successfully completed running 'show interface vlan 102'
+2021-05-11 07:00:17,744  vlan_info  DEBUG: start running 'show interface vlan 103'
+2021-05-11 07:00:21,709  vlan_info  DEBUG: successfully completed running 'show interface vlan 103'
+2021-05-11 07:00:21,709  vlan_info  DEBUG: start running 'show interface vlan 104'
+2021-05-11 07:00:25,184  vlan_info  DEBUG: successfully completed running 'show interface vlan 104'
+2021-05-11 07:00:25,185  vlan_info  DEBUG: start running 'show interface vlan 105'
+2021-05-11 07:00:26,816  vlan_info  DEBUG: successfully completed running 'show interface vlan 105'
+2021-05-11 07:00:26,817  update_entries  DEBUG: Vlan entries update requested
+2021-05-11 07:00:26,826  update_entries  DEBUG: Vlan 1 not found in db. Insertion beginning with data from switch
+2021-05-11 07:00:26,856  update_entries  DEBUG: Vlan 1 insertion to db completed successfully
+2021-05-11 07:00:26,857  update_entries  DEBUG: Vlan 100 not found in db. Insertion beginning with data from switch
+2021-05-11 07:00:26,870  update_entries  DEBUG: Vlan 100 insertion to db completed successfully
+2021-05-11 07:00:26,871  update_entries  DEBUG: Vlan 101 not found in db. Insertion beginning with data from switch
+2021-05-11 07:00:26,881  update_entries  DEBUG: Vlan 101 insertion to db completed successfully
+2021-05-11 07:00:26,882  update_entries  DEBUG: Vlan 102 not found in db. Insertion beginning with data from switch
+2021-05-11 07:00:26,889  update_entries  DEBUG: Vlan 102 insertion to db completed successfully
+2021-05-11 07:00:26,892  update_entries  DEBUG: Vlan 103 not found in db. Insertion beginning with data from switch
+2021-05-11 07:00:26,897  update_entries  DEBUG: Vlan 103 insertion to db completed successfully
+2021-05-11 07:00:26,898  update_entries  DEBUG: Vlan 104 not found in db. Insertion beginning with data from switch
+2021-05-11 07:00:26,907  update_entries  DEBUG: Vlan 104 insertion to db completed successfully
+2021-05-11 07:00:26,907  update_entries  DEBUG: Vlan 105 not found in db. Insertion beginning with data from switch
+2021-05-11 07:00:26,914  update_entries  DEBUG: Vlan 105 insertion to db completed successfully
+2021-05-11 07:00:26,967  get_vlans  DEBUG: getting all vlans
+2021-05-11 07:00:26,967  get_vlans  DEBUG: getting all vlans
+2021-05-11 07:00:26,974  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 07:00:26,974  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 07:00:51,719  create_vlan  DEBUG: attempting to create vlan id=12 name=Brunner description=Testing
+2021-05-11 07:01:18,449  create_vlan  DEBUG: attempt to create vlan id=12 name=Brunner description=Testing successful
+2021-05-11 07:01:18,452  insert_vlan  DEBUG: attempting to insert vlan id=12 name=Brunner description=Testing to database
+2021-05-11 07:01:18,461  insert_vlan  DEBUG: insertion attempt successful of vlan id=12 name=Brunner description=Testing
+2021-05-11 07:01:18,474  get_vlans  DEBUG: getting all vlans
+2021-05-11 07:01:18,474  get_vlans  DEBUG: getting all vlans
+2021-05-11 07:01:18,474  get_vlans  DEBUG: getting all vlans
+2021-05-11 07:01:18,480  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 07:01:18,480  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 07:01:18,480  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 07:01:27,727  vlan_info  DEBUG: start sending 'show vlan brief'
+2021-05-11 07:01:27,727  vlan_info  DEBUG: start sending 'show vlan brief'
+2021-05-11 07:01:31,062  vlan_info  DEBUG: parsing 'show vlan brief' string to python datatypes
+2021-05-11 07:01:31,062  vlan_info  DEBUG: parsing 'show vlan brief' string to python datatypes
+2021-05-11 07:01:31,062  vlan_info  DEBUG: VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    
+12   Brunner                          active    
+100  mgmt                             active    Po11, Eth1/1, Eth1/2
+101  prod                             active    Po11, Eth1/1, Eth1/2
+102  dev                              active    Po11, Eth1/1, Eth1/2
+103  test                             active    Po11, Eth1/1, Eth1/2
+104  security                         active    Po11, Eth1/1, Eth1/2
+105  iot                              active    Po11, Eth1/1, Eth1/2
+
+
+2021-05-11 07:01:31,062  vlan_info  DEBUG: VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    
+12   Brunner                          active    
+100  mgmt                             active    Po11, Eth1/1, Eth1/2
+101  prod                             active    Po11, Eth1/1, Eth1/2
+102  dev                              active    Po11, Eth1/1, Eth1/2
+103  test                             active    Po11, Eth1/1, Eth1/2
+104  security                         active    Po11, Eth1/1, Eth1/2
+105  iot                              active    Po11, Eth1/1, Eth1/2
+
+
+2021-05-11 07:01:31,063  vlan_info  DEBUG: fetching vlan description
+2021-05-11 07:01:31,063  vlan_info  DEBUG: fetching vlan description
+2021-05-11 07:01:31,064  vlan_info  DEBUG: start running 'show interface vlan 12'
+2021-05-11 07:01:31,064  vlan_info  DEBUG: start running 'show interface vlan 12'
+2021-05-11 07:01:32,819  vlan_info  DEBUG: successfully completed running 'show interface vlan 12'
+2021-05-11 07:01:32,819  vlan_info  DEBUG: successfully completed running 'show interface vlan 12'
+2021-05-11 07:01:32,822  vlan_info  DEBUG: start running 'show interface vlan 100'
+2021-05-11 07:01:32,822  vlan_info  DEBUG: start running 'show interface vlan 100'
+2021-05-11 07:01:34,891  vlan_info  DEBUG: successfully completed running 'show interface vlan 100'
+2021-05-11 07:01:34,891  vlan_info  DEBUG: successfully completed running 'show interface vlan 100'
+2021-05-11 07:01:34,892  vlan_info  DEBUG: start running 'show interface vlan 101'
+2021-05-11 07:01:34,892  vlan_info  DEBUG: start running 'show interface vlan 101'
+2021-05-11 07:01:37,078  vlan_info  DEBUG: successfully completed running 'show interface vlan 101'
+2021-05-11 07:01:37,078  vlan_info  DEBUG: successfully completed running 'show interface vlan 101'
+2021-05-11 07:01:37,078  vlan_info  DEBUG: start running 'show interface vlan 102'
+2021-05-11 07:01:37,078  vlan_info  DEBUG: start running 'show interface vlan 102'
+2021-05-11 07:01:38,964  vlan_info  DEBUG: successfully completed running 'show interface vlan 102'
+2021-05-11 07:01:38,964  vlan_info  DEBUG: successfully completed running 'show interface vlan 102'
+2021-05-11 07:01:38,965  vlan_info  DEBUG: start running 'show interface vlan 103'
+2021-05-11 07:01:38,965  vlan_info  DEBUG: start running 'show interface vlan 103'
+2021-05-11 07:01:40,506  vlan_info  DEBUG: successfully completed running 'show interface vlan 103'
+2021-05-11 07:01:40,506  vlan_info  DEBUG: successfully completed running 'show interface vlan 103'
+2021-05-11 07:01:40,510  vlan_info  DEBUG: start running 'show interface vlan 104'
+2021-05-11 07:01:40,510  vlan_info  DEBUG: start running 'show interface vlan 104'
+2021-05-11 07:01:41,780  vlan_info  DEBUG: successfully completed running 'show interface vlan 104'
+2021-05-11 07:01:41,780  vlan_info  DEBUG: successfully completed running 'show interface vlan 104'
+2021-05-11 07:01:41,781  vlan_info  DEBUG: start running 'show interface vlan 105'
+2021-05-11 07:01:41,781  vlan_info  DEBUG: start running 'show interface vlan 105'
+2021-05-11 07:01:43,619  vlan_info  DEBUG: successfully completed running 'show interface vlan 105'
+2021-05-11 07:01:43,619  vlan_info  DEBUG: successfully completed running 'show interface vlan 105'
+2021-05-11 07:01:43,625  update_entries  DEBUG: Vlan entries update requested
+2021-05-11 07:01:43,625  update_entries  DEBUG: Vlan entries update requested
+2021-05-11 07:01:43,627  update_entries  DEBUG: Vlan 12 found in db. Updating Vlan with most recent information
+2021-05-11 07:01:43,627  update_entries  DEBUG: Vlan 12 found in db. Updating Vlan with most recent information
+2021-05-11 07:01:43,645  update_entries  DEBUG: Vlan 12 Update to db completed successfully.
+2021-05-11 07:01:43,645  update_entries  DEBUG: Vlan 12 Update to db completed successfully.
+2021-05-11 07:01:43,646  update_entries  DEBUG: Vlan 100 found in db. Updating Vlan with most recent information
+2021-05-11 07:01:43,646  update_entries  DEBUG: Vlan 100 found in db. Updating Vlan with most recent information
+2021-05-11 07:01:43,651  update_entries  DEBUG: Vlan 100 Update to db completed successfully.
+2021-05-11 07:01:43,651  update_entries  DEBUG: Vlan 100 Update to db completed successfully.
+2021-05-11 07:01:43,651  update_entries  DEBUG: Vlan 101 found in db. Updating Vlan with most recent information
+2021-05-11 07:01:43,651  update_entries  DEBUG: Vlan 101 found in db. Updating Vlan with most recent information
+2021-05-11 07:01:43,664  update_entries  DEBUG: Vlan 101 Update to db completed successfully.
+2021-05-11 07:01:43,664  update_entries  DEBUG: Vlan 101 Update to db completed successfully.
+2021-05-11 07:01:43,664  update_entries  DEBUG: Vlan 102 found in db. Updating Vlan with most recent information
+2021-05-11 07:01:43,664  update_entries  DEBUG: Vlan 102 found in db. Updating Vlan with most recent information
+2021-05-11 07:01:43,668  update_entries  DEBUG: Vlan 102 Update to db completed successfully.
+2021-05-11 07:01:43,668  update_entries  DEBUG: Vlan 102 Update to db completed successfully.
+2021-05-11 07:01:43,668  update_entries  DEBUG: Vlan 103 found in db. Updating Vlan with most recent information
+2021-05-11 07:01:43,668  update_entries  DEBUG: Vlan 103 found in db. Updating Vlan with most recent information
+2021-05-11 07:01:43,677  update_entries  DEBUG: Vlan 103 Update to db completed successfully.
+2021-05-11 07:01:43,677  update_entries  DEBUG: Vlan 103 Update to db completed successfully.
+2021-05-11 07:01:43,678  update_entries  DEBUG: Vlan 104 found in db. Updating Vlan with most recent information
+2021-05-11 07:01:43,678  update_entries  DEBUG: Vlan 104 found in db. Updating Vlan with most recent information
+2021-05-11 07:01:43,683  update_entries  DEBUG: Vlan 104 Update to db completed successfully.
+2021-05-11 07:01:43,683  update_entries  DEBUG: Vlan 104 Update to db completed successfully.
+2021-05-11 07:01:43,686  update_entries  DEBUG: Vlan 105 found in db. Updating Vlan with most recent information
+2021-05-11 07:01:43,686  update_entries  DEBUG: Vlan 105 found in db. Updating Vlan with most recent information
+2021-05-11 07:01:43,698  update_entries  DEBUG: Vlan 105 Update to db completed successfully.
+2021-05-11 07:01:43,698  update_entries  DEBUG: Vlan 105 Update to db completed successfully.
+2021-05-11 07:01:43,698  update_entries  DEBUG: Vlan 1 found found in db but not on router. Deletion on db began
+2021-05-11 07:01:43,698  update_entries  DEBUG: Vlan 1 found found in db but not on router. Deletion on db began
+2021-05-11 07:01:43,709  update_entries  DEBUG: Vlan 1 deletion from db completed successfully
+2021-05-11 07:01:43,709  update_entries  DEBUG: Vlan 1 deletion from db completed successfully
+2021-05-11 07:01:43,737  get_vlans  DEBUG: getting all vlans
+2021-05-11 07:01:43,737  get_vlans  DEBUG: getting all vlans
+2021-05-11 07:01:43,737  get_vlans  DEBUG: getting all vlans
+2021-05-11 07:01:43,737  get_vlans  DEBUG: getting all vlans
+2021-05-11 07:01:43,741  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 07:01:43,741  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 07:01:43,741  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 07:01:43,741  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 07:01:53,359  delete_vlan_from_switch  DEBUG: attempting to delete vlan 12 from switch
+2021-05-11 07:01:56,084  delete_vlan_from_switch  DEBUG: successfully deleted vlan 12 from switch
+2021-05-11 07:01:56,085  delete_vlan_from_db  DEBUG: attempting to delete vlan 12 from database
+2021-05-11 07:01:56,096  delete_vlan_from_db  DEBUG: successfully deleted vlan 12 from database
+2021-05-11 07:01:56,106  get_vlans  DEBUG: getting all vlans
+2021-05-11 07:01:56,106  get_vlans  DEBUG: getting all vlans
+2021-05-11 07:01:56,106  get_vlans  DEBUG: getting all vlans
+2021-05-11 07:01:56,106  get_vlans  DEBUG: getting all vlans
+2021-05-11 07:01:56,106  get_vlans  DEBUG: getting all vlans
+2021-05-11 07:01:56,118  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 07:01:56,118  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 07:01:56,118  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 07:01:56,118  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 07:01:56,118  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 22:35:44,621  get_vlans  DEBUG: getting all vlans
+2021-05-11 22:35:44,671  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 23:29:47,834  get_vlans  DEBUG: getting all vlans
+2021-05-11 23:29:48,264  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 23:30:46,052  create_vlan  DEBUG: attempting to create vlan id=12 name=vlansNMS Test! description=Testing our vlansNMS web GUI.
+2021-05-11 23:30:57,006  create_vlan  DEBUG: attempt to create vlan id=12 name=vlansNMS Test! description=Testing our vlansNMS web GUI. successful
+2021-05-11 23:30:57,012  insert_vlan  DEBUG: attempting to insert vlan id=12 name=vlansNMS Test! description=Testing our vlansNMS web GUI. to database
+2021-05-11 23:30:57,685  insert_vlan  DEBUG: insertion attempt successful of vlan id=12 name=vlansNMS Test! description=Testing our vlansNMS web GUI.
+2021-05-11 23:30:57,754  get_vlans  DEBUG: getting all vlans
+2021-05-11 23:30:57,754  get_vlans  DEBUG: getting all vlans
+2021-05-11 23:30:57,763  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 23:30:57,763  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 23:34:40,809  delete_vlan_from_switch  DEBUG: attempting to delete vlan 12 from switch
+2021-05-11 23:34:42,489  delete_vlan_from_switch  DEBUG: successfully deleted vlan 12 from switch
+2021-05-11 23:34:42,491  delete_vlan_from_db  DEBUG: attempting to delete vlan 12 from database
+2021-05-11 23:34:42,573  delete_vlan_from_db  DEBUG: successfully deleted vlan 12 from database
+2021-05-11 23:34:42,623  get_vlans  DEBUG: getting all vlans
+2021-05-11 23:34:42,623  get_vlans  DEBUG: getting all vlans
+2021-05-11 23:34:42,623  get_vlans  DEBUG: getting all vlans
+2021-05-11 23:34:42,628  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 23:34:42,628  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 23:34:42,628  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 23:45:46,797  get_vlans  DEBUG: getting all vlans
+2021-05-11 23:45:46,861  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 23:46:26,612  create_vlan  DEBUG: attempting to create vlan id=12 name=vlansNMS Test! description=Creating a vlan using the vlansNMS application!
+2021-05-11 23:46:58,304  create_vlan  DEBUG: attempt to create vlan id=12 name=vlansNMS Test! description=Creating a vlan using the vlansNMS application! successful
+2021-05-11 23:46:58,312  insert_vlan  DEBUG: attempting to insert vlan id=12 name=vlansNMS Test! description=Creating a vlan using the vlansNMS application! to database
+2021-05-11 23:46:58,352  insert_vlan  DEBUG: insertion attempt successful of vlan id=12 name=vlansNMS Test! description=Creating a vlan using the vlansNMS application!
+2021-05-11 23:46:58,365  get_vlans  DEBUG: getting all vlans
+2021-05-11 23:46:58,365  get_vlans  DEBUG: getting all vlans
+2021-05-11 23:46:58,372  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 23:46:58,372  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 23:47:16,903  vlan_info  DEBUG: start sending 'show vlan brief'
+2021-05-11 23:47:19,623  vlan_info  DEBUG: parsing 'show vlan brief' string to python datatypes
+2021-05-11 23:47:19,624  vlan_info  DEBUG: 
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    
+12   VLAN0012                         active    
+100  mgmt                             active    Po11, Eth1/1, Eth1/2
+101  prod                             active    Po11, Eth1/1, Eth1/2
+102  dev                              active    Po11, Eth1/1, Eth1/2
+103  test                             active    Po11, Eth1/1, Eth1/2
+104  security                         active    Po11, Eth1/1, Eth1/2
+105  iot                              active    Po11, Eth1/1, Eth1/2
+
+
+2021-05-11 23:47:19,625  vlan_info  DEBUG: fetching vlan description
+2021-05-11 23:47:19,626  vlan_info  DEBUG: start running 'show interface vlan 1'
+2021-05-11 23:47:23,107  vlan_info  DEBUG: successfully completed running 'show interface vlan 1'
+2021-05-11 23:47:23,108  vlan_info  DEBUG: start running 'show interface vlan 12'
+2021-05-11 23:47:27,485  vlan_info  DEBUG: successfully completed running 'show interface vlan 12'
+2021-05-11 23:47:27,485  vlan_info  DEBUG: start running 'show interface vlan 100'
+2021-05-11 23:47:31,243  vlan_info  DEBUG: successfully completed running 'show interface vlan 100'
+2021-05-11 23:47:31,244  vlan_info  DEBUG: start running 'show interface vlan 101'
+2021-05-11 23:47:35,868  vlan_info  DEBUG: successfully completed running 'show interface vlan 101'
+2021-05-11 23:47:35,869  vlan_info  DEBUG: start running 'show interface vlan 102'
+2021-05-11 23:47:39,910  vlan_info  DEBUG: successfully completed running 'show interface vlan 102'
+2021-05-11 23:47:39,912  vlan_info  DEBUG: start running 'show interface vlan 103'
+2021-05-11 23:47:43,784  vlan_info  DEBUG: successfully completed running 'show interface vlan 103'
+2021-05-11 23:47:43,785  vlan_info  DEBUG: start running 'show interface vlan 104'
+2021-05-11 23:47:48,278  vlan_info  DEBUG: successfully completed running 'show interface vlan 104'
+2021-05-11 23:47:48,282  vlan_info  DEBUG: start running 'show interface vlan 105'
+2021-05-11 23:47:52,582  vlan_info  DEBUG: successfully completed running 'show interface vlan 105'
+2021-05-11 23:47:52,584  update_entries  DEBUG: Vlan entries update requested
+2021-05-11 23:47:52,613  update_entries  DEBUG: Vlan 1 not found in db. Insertion beginning with data from switch
+2021-05-11 23:47:52,628  update_entries  DEBUG: Vlan 1 insertion to db completed successfully
+2021-05-11 23:47:52,631  update_entries  DEBUG: Vlan 12 found in db. Updating Vlan with most recent information
+2021-05-11 23:47:52,708  update_entries  DEBUG: Vlan 12 Update to db completed successfully.
+2021-05-11 23:47:52,714  update_entries  DEBUG: Vlan 100 found in db. Updating Vlan with most recent information
+2021-05-11 23:47:52,764  update_entries  DEBUG: Vlan 100 Update to db completed successfully.
+2021-05-11 23:47:52,765  update_entries  DEBUG: Vlan 101 found in db. Updating Vlan with most recent information
+2021-05-11 23:47:52,790  update_entries  DEBUG: Vlan 101 Update to db completed successfully.
+2021-05-11 23:47:52,791  update_entries  DEBUG: Vlan 102 found in db. Updating Vlan with most recent information
+2021-05-11 23:47:52,798  update_entries  DEBUG: Vlan 102 Update to db completed successfully.
+2021-05-11 23:47:52,798  update_entries  DEBUG: Vlan 103 found in db. Updating Vlan with most recent information
+2021-05-11 23:47:52,806  update_entries  DEBUG: Vlan 103 Update to db completed successfully.
+2021-05-11 23:47:52,816  update_entries  DEBUG: Vlan 104 found in db. Updating Vlan with most recent information
+2021-05-11 23:47:52,840  update_entries  DEBUG: Vlan 104 Update to db completed successfully.
+2021-05-11 23:47:52,842  update_entries  DEBUG: Vlan 105 found in db. Updating Vlan with most recent information
+2021-05-11 23:47:52,856  update_entries  DEBUG: Vlan 105 Update to db completed successfully.
+2021-05-11 23:47:52,866  get_vlans  DEBUG: getting all vlans
+2021-05-11 23:47:52,866  get_vlans  DEBUG: getting all vlans
+2021-05-11 23:47:52,866  get_vlans  DEBUG: getting all vlans
+2021-05-11 23:47:52,892  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 23:47:52,892  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 23:47:52,892  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 23:48:14,299  delete_vlan_from_switch  DEBUG: attempting to delete vlan 12 from switch
+2021-05-11 23:48:18,459  delete_vlan_from_switch  DEBUG: successfully deleted vlan 12 from switch
+2021-05-11 23:48:18,463  delete_vlan_from_db  DEBUG: attempting to delete vlan 12 from database
+2021-05-11 23:48:18,491  delete_vlan_from_db  DEBUG: successfully deleted vlan 12 from database
+2021-05-11 23:48:18,559  get_vlans  DEBUG: getting all vlans
+2021-05-11 23:48:18,559  get_vlans  DEBUG: getting all vlans
+2021-05-11 23:48:18,559  get_vlans  DEBUG: getting all vlans
+2021-05-11 23:48:18,559  get_vlans  DEBUG: getting all vlans
+2021-05-11 23:48:18,584  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 23:48:18,584  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 23:48:18,584  get_vlans  DEBUG: vlans fetched successully
+2021-05-11 23:48:18,584  get_vlans  DEBUG: vlans fetched successully
